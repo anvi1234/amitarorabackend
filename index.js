@@ -10,7 +10,7 @@ const { links } = require("express/lib/response");
 var app = express()
 app.use(compression())
 app.use(cors({
-    origin: 'https://amitarorabackend-pd7cc4jlq-anvi1234s-projects.vercel.app',
+    origin: 'http://localhost:4200',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true // Allows cookies to be sent along with the request
   }));
