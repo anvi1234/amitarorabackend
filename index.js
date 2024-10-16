@@ -14,7 +14,13 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true // Allows cookies to be sent along with the request
   }));
-
+app.use((req, res, next) => {
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json());
 app.use(cors())
@@ -31,7 +37,13 @@ app.use(function(req, res, next) {
 // origin:true,
 // credentials: true }))
 
-
+app.use((req, res, next) => {
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
 app.use(require('./routes/index.route'));
 app.use((err,req,res,next)=>{
     if(err.name === 'ValidationError'){
