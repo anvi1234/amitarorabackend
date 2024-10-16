@@ -27,6 +27,7 @@ const corsOptions = {
   };
   
   app.use(cors(corsOptions));
+  app.options('*', cors(corsOptions));
 // app.use(cors({ origin: ["https://ashugallery12.herokuapp.com"], 
 
 // methods:["GET","POST","DELETE","PUT"],
