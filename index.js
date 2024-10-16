@@ -12,7 +12,6 @@ app.use(compression())
 
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json());
-app.use(cors())
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", '*');
   res.header("Access-Control-Allow-Credentials", true);
@@ -20,6 +19,14 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
   next();
 });
+const corsOptions = {
+    origin: 'https://caamitaroraclasses.com', // Add your allowed origin here
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true, // Set to true if your requests need to include credentials (like cookies)
+  };
+  
+  app.use(cors(corsOptions));
 // app.use(cors({ origin: ["https://ashugallery12.herokuapp.com"], 
 
 // methods:["GET","POST","DELETE","PUT"],
