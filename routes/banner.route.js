@@ -3,9 +3,9 @@ const express =  require("express");
 const router = express.Router();
 
 const banner = require('../controller/banner.controller');
-router.post("/add-banner",banner.addbanner);
+router.post("/add-banner",banner.addBanner);
 // // Retrieve all Tutorials
-router.get("/get-banner", banner.getbanner);
-router.delete('/deletebanner/:id', banner.deletebanner);
+router.get("/get-banner", banner.getBanners);
+router.delete('/deletebanner/:id', banner.deleteBanner);
 
 module.exports = router;

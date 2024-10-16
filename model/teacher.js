@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
 
 var TeacherSchema = new mongoose.Schema({
-    name:String,
-    fireBaseUrl :String,
-    description:String,
+    teacherName:String,
+    teacherImage :String,
+    teacherDetails:String,
+    teacherDescription:String,
+    teacherLevel:String,
     position:Number
    
 })

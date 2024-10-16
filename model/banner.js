@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 
 var BannerSchema = new mongoose.Schema({
-    fireBaseUrl :String
+    bannerFile :String,
+    position:Number
    
 })
 

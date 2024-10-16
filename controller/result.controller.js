@@ -1,11 +1,8 @@
-const db = require("../model")
-const mongoose = require('mongoose');
- const _= require('lodash')
-  const Result = mongoose.model('Result')
-  
+
+  const Result = require('../model/result');
   module.exports.addResult = (req,res,next) =>{
     var result = new  Result()
-    result.fireBaseUrl = req.body.fireBaseUrl 
+    result.resultImage = req.body.resultImage 
     result.save((err,doc)=>{
         if(!err)
         res.send(doc);
