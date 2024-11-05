@@ -3,6 +3,7 @@
   module.exports.addResult = (req,res,next) =>{
     var result = new  Result()
     result.resultImage = req.body.resultImage 
+    result.position = req.body.position
     result.save((err,doc)=>{
         if(!err)
         res.send(doc);

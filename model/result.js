@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 
 var ResultSchema = new mongoose.Schema({
-    resultImage :String
+    resultImage :String,
+    position:Number
    
 })
 
