@@ -7,7 +7,8 @@ module.exports.addContact = (req, res, next) => {
         name: req.body.name,
         email: req.body.email,
         subject: req.body.subject,
-        message: req.body.message
+        message: req.body.message,
+        phone:req.body.phone
     });
 
     contact.save((err, doc) => {

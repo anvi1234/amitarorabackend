@@ -6,7 +6,8 @@ module.exports.addEvent = (req, res, next) => {
     try {
         const event = new Event({
             eventFile: req.body.eventFile,
-            eventName: req.body.eventName
+            eventName: req.body.eventName,
+            position:req.body.position
         });
        event.save((err, doc) => {
             if (err) {
