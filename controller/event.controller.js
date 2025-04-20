@@ -8,6 +8,7 @@ module.exports.addEvent = (req, res, next) => {
             eventFile: req.body.eventFile,
             eventName: req.body.eventName,
             position:req.body.position
+
         });
        event.save((err, doc) => {
             if (err) {
