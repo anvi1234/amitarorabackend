@@ -39,7 +39,7 @@ module.exports.updateEvent = (req, res, next) => {
     const { id } = req.params; // Assuming the ID of the banner is provided in the route parameters
     const updateData = req.body; // Data to update from the request body
 
-    Result.findByIdAndUpdate(id, updateData, { new: true }, (err, updatedBanner) => {
+    Event.findByIdAndUpdate(id, updateData, { new: true }, (err, updatedBanner) => {
         if (err) {
             console.log(err);
             return next(err);
