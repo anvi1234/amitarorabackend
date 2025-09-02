@@ -30,7 +30,7 @@ module.exports.getBanners = (req, res, next) => {
 };
 
 module.exports.updateBanner = (req, res, next) => {
-    const { id } = req.params.id; // Assuming the ID of the banner is provided in the route parameters
+    const { id } = req.params; // Assuming the ID of the banner is provided in the route parameters
     const updateData = req.body; // Data to update from the request body
 
     Banner.findByIdAndUpdate(id, updateData, { new: true }, (err, updatedBanner) => {
