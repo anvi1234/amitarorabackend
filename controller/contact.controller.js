@@ -8,7 +8,8 @@ module.exports.addContact = (req, res, next) => {
         email: req.body.email,
         subject: req.body.subject,
         message: req.body.message,
-        phone:req.body.phone
+        phone:req.body.phone,
+        date: Date.now()
     });
 
     contact.save((err, doc) => {
