@@ -5,7 +5,11 @@ var ContactSchema = new mongoose.Schema({
     email :String,
     subject:String,
     message:String,
-    phone:Number   
+    phone:Number,
+    date: {
+        type: Date,
+        default: Date.now   // this will set the current date automatically
+    }
 })
 
 module.exports = mongoose.model('Contact',ContactSchema
