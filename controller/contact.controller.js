@@ -9,7 +9,7 @@ module.exports.addContact = (req, res, next) => {
         subject: req.body.subject,
         message: req.body.message,
         phone:req.body.phone,
-        date: Date.now()
+        date: req.body.date
     });
 
     contact.save((err, doc) => {
