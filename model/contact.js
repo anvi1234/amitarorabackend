@@ -7,8 +7,7 @@ var ContactSchema = new mongoose.Schema({
     message:String,
     phone:Number,
     date: {
-        type: Date,
-        default: Date.now   // this will set the current date automatically
+        type: Date  // this will set the current date automatically
     }
 })
 
